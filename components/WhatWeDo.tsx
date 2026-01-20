@@ -1,56 +1,32 @@
 "use client"
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { useLanguage } from "./LanguageProvider"
+import { translations } from "@/lib/translations"
 
 export function WhatWeDo() {
-  const services = [
-    {
-      title: "Automatyzacje",
-      description: "Od prac ręcznych do sztucznej inteligencji",
-      borderColor: "border-purple-500/20"
-    },
-    {
-      title: "Migracja do Chmury",
-      description: "Szybko i bezpiecznie",
-      borderColor: "border-blue-500/20"
-    },
-    {
-      title: "Migracja do Open Source",
-      description: "Wolność, która się opłaca",
-      borderColor: "border-green-500/20"
-    },
-    {
-      title: "Transformacja cyfrowa",
-      description: "Technologia, która zmienia sposób działania firmy",
-      borderColor: "border-orange-500/20"
-    },
-    {
-      title: "Modernizacja danych",
-      description: "Nowoczesne dane, lepsze decyzje",
-      borderColor: "border-indigo-500/20"
-    },
-    {
-      title: "Wdrożenia AI",
-      description: "Sztuczna inteligencja w Twojej firmie",
-      borderColor: "border-violet-500/20"
-    }
-  ]
+  const { language } = useLanguage()
+  const t = translations[language]
+  const services = t.whatWeDo.services
 
   return (
     <section id="what-we-do" className="py-32 px-6 bg-white dark:bg-[rgb(74,87,100)] transition-colors relative z-10">
       <div className="container mx-auto max-w-7xl">
-        <h2 className="text-4xl md:text-5xl font-display font-light text-center mb-20 text-gray-900 dark:text-white transition-colors tracking-tight">What we do</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Card 
+            <div 
               key={index} 
-              className="border border-white/20 dark:border-white/10 hover:border-white/30 dark:hover:border-white/20 transition-all bg-white/70 dark:bg-[rgb(74,87,100)]/70 backdrop-blur-md shadow-sm hover:shadow-lg rounded-2xl"
+              className="group relative p-[1px] rounded-2xl bg-gradient-to-br from-gray-200 via-gray-300 to-gray-200 dark:from-white/10 dark:via-white/20 dark:to-white/10 hover:from-blue-500 hover:via-blue-500 hover:to-blue-500 dark:hover:from-blue-500 dark:hover:via-blue-500 dark:hover:to-blue-500 transition-all duration-300 animate-in fade-in slide-in-from-bottom-4"
+              style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'both' }}
             >
-              <CardHeader className="p-8">
-                <CardTitle className="text-xl font-display font-light text-gray-900 dark:text-white mb-3 transition-colors">{service.title}</CardTitle>
-                <CardDescription className="text-gray-600 dark:text-gray-300 text-base font-light leading-relaxed transition-colors">{service.description}</CardDescription>
-              </CardHeader>
-            </Card>
+              <div className="p-8 rounded-2xl bg-white dark:bg-[rgb(74,87,100)] h-full">
+                <h3 className="text-xl md:text-2xl font-medium tracking-[-0.02em] text-attio-dark dark:text-white mb-4 font-sans">
+                  {service.title}
+                </h3>
+                <p className="text-lg md:text-xl font-medium tracking-[-0.16px] text-attio-light dark:text-gray-400 font-sans leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            </div>
           ))}
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useEffect, useState } from "react"
+import { createContext, useContext, useEffect, useState, useCallback } from "react"
 
 type Theme = "light" | "dark"
 
@@ -21,24 +21,38 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const initialTheme = savedTheme || "dark"
     
     // Apply theme immediately to prevent flash
-    document.documentElement.classList.remove("light", "dark")
-    document.documentElement.classList.add(initialTheme)
+    const root = document.documentElement
+    root.classList.remove("light", "dark")
+    root.classList.add(initialTheme)
     
     setTheme(initialTheme)
     setMounted(true)
   }, [])
 
-  useEffect(() => {
-    if (mounted) {
-      document.documentElement.classList.remove("light", "dark")
-      document.documentElement.classList.add(theme)
-      localStorage.setItem("theme", theme)
-    }
-  }, [theme, mounted])
+  const toggleTheme = useCallback(() => {
+    setTheme((prev) => {
+      const newTheme = prev === "light" ? "dark" : "light"
+      
+      // Immediately apply to DOM
+      if (typeof document !== "undefined") {
+        const root = document.documentElement
+        root.classList.remove("light", "dark")
+        root.classList.add(newTheme)
+        localStorage.setItem("theme", newTheme)
+      }
+      
+      return newTheme
+    })
+  }, [])
 
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"))
-  }
+  useEffect(() => {
+    if (!mounted) return
+    
+    const root = document.documentElement
+    root.classList.remove("light", "dark")
+    root.classList.add(theme)
+    localStorage.setItem("theme", theme)
+  }, [theme, mounted])
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

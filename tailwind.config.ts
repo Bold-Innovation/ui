@@ -23,6 +23,10 @@ const config = {
     },
     extend: {
       colors: {
+        attio: {
+          dark: "#1C1D1F",
+          light: "#8D99A8",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

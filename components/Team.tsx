@@ -2,28 +2,22 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Linkedin } from "lucide-react"
+import { useLanguage } from "./LanguageProvider"
+import { translations } from "@/lib/translations"
 
 export function Team() {
-  const teamMembers = [
-    {
-      name: "Hubert Taler",
-      role: "CTO",
-      description: "Poznaj Huberta, naszego cenionego CTO, który może się pochwalić imponującym 25-letnim doświadczeniem w branży IT. Prawdziwy weteran, z nostalgią wspominający czasy Commodore 64, jednak jego umiejętności i zdolność do adaptacji są równie nowoczesne, jak najnowsza karta graficzna NVIDIA.",
-      image: "https://avatars.githubusercontent.com/u/7080231?v=4"
-    },
-    {
-      name: "Łukasz Sadłowski",
-      role: "CEO",
-      description: "Poznaj Łukasza – eksperta od wzrostu i transformacji. Z ponad 18-letnim doświadczeniem w sprzedaży, zarządzaniu i doradztwie, łączy strategiczne myślenie z praktycznym podejściem. Tworzy rozwiązania, które naprawdę działają – od ubezpieczeń po AI w biznesie.",
-      image: "/lukasz.jpeg"
-    }
-  ]
+  const { language } = useLanguage()
+  const t = translations[language]
+  const teamMembers = t.team.members.map((member, index) => ({
+    ...member,
+    image: index === 0 ? "/hubert.jpeg" : "/lukasz.jpeg"
+  }))
 
   return (
     <section id="who-we-are" className="py-24 px-4 bg-white dark:bg-[rgb(74,87,100)] transition-colors relative z-10">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-3xl font-display font-semibold text-center mb-3 text-gray-900 dark:text-white transition-colors">Poznaj założycieli</h2>
-        <p className="text-center text-gray-600 dark:text-gray-300 mb-16 transition-colors">Dobry samolot ma dwa silniki</p>
+        <h2 className="text-3xl font-display font-semibold text-center mb-3 text-gray-900 dark:text-white transition-colors">{t.team.heading}</h2>
+        <p className="text-center text-gray-600 dark:text-gray-300 mb-16 transition-colors">{t.team.subtitle}</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {teamMembers.map((member, index) => (
             <Card 

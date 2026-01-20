@@ -11,8 +11,12 @@ export function Construma() {
             <CardTitle className="text-xl font-display font-semibold text-gray-900 dark:text-white transition-colors">Construma 2026</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="w-full h-64 bg-gray-100 dark:bg-white/5 rounded-md mb-4 flex items-center justify-center border border-gray-200 dark:border-white/10 transition-colors">
-              <span className="text-gray-400 dark:text-gray-500 text-sm transition-colors">Construma 2026 Budapeszt.png</span>
+            <div className="w-full rounded-md mb-4 overflow-hidden border border-gray-200 dark:border-white/10 transition-colors">
+              <img 
+                src="https://polnocnaizba.pl/wp-content/uploads/2025/10/zdjecia-ilustracyjne-1080-x-500-px.png" 
+                alt="Construma 2026"
+                className="w-full h-auto"
+              />
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed transition-colors">
               Udział w wydarzeniu dofinansowany w ramach projektu niekonkurencyjnego pn. „Ster na Eksport" realizowany w ramach programu Fundusze Europejskie dla Pomorza Zachodniego 2021-2027, Działanie 1.9 Przygotowanie i wdrożenie nowych modeli biznesowych przedsiębiorstw (w tym wspólne projekty przedsiębiorstw i IOB) - Typ projektu 3 Promocja eksportu i internacjonalizacja MŚP.

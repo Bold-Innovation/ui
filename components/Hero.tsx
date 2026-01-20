@@ -3,33 +3,40 @@
 import { useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { ParticleEffect } from "@/components/ParticleEffect"
+import { useLanguage } from "./LanguageProvider"
+import { translations } from "@/lib/translations"
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null)
+  const { language } = useLanguage()
+  const t = translations[language]
 
   return (
-    <section ref={sectionRef as React.RefObject<HTMLElement>} className="h-screen pt-24 pb-16 px-6 bg-white dark:bg-[rgb(74,87,100)] transition-colors relative overflow-hidden flex items-center">
+    <section ref={sectionRef as React.RefObject<HTMLElement>} className="min-h-screen pt-32 pb-24 px-6 bg-white dark:bg-[rgb(74,87,100)] transition-colors relative overflow-hidden flex items-center">
       <ParticleEffect containerRef={sectionRef} />
-      <div className="container mx-auto max-w-4xl text-center relative z-10">
-        <div className="mb-8">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-light text-gray-900 dark:text-white leading-[1.1] transition-colors mb-6 tracking-tight">
-            ZAMIEŃ SWOJE DANE W WIEDZĘ
+      <div className="container mx-auto max-w-5xl text-center relative z-10">
+        <div className="mb-6">
+          <p className="text-sm font-medium tracking-wide text-attio-light uppercase font-sans">
+            {t.hero.tagline}
+          </p>
+        </div>
+        <div className="mb-8 flex justify-center">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-medium tracking-[-0.03em] text-attio-dark dark:text-white leading-[1.1] font-sans whitespace-nowrap">
+            {t.hero.heading}
           </h1>
         </div>
-        <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 font-light max-w-2xl mx-auto transition-colors leading-relaxed">
-          Wyprzedź konkurencję dzięki zaawansowanej automatyzacji opartej na sztucznej inteligencji.
+        <p className="text-xl md:text-2xl font-normal mb-10 max-w-2xl mx-auto leading-relaxed text-attio-light dark:text-gray-400 font-sans">
+          {t.hero.description}
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        <div className="flex items-center justify-center">
           <Button 
             size="lg" 
-            className="bg-gray-900 dark:bg-white dark:text-[rgb(74,87,100)] text-white hover:bg-gray-800 dark:hover:bg-gray-100 transition-all rounded-full px-8 py-6 text-base font-normal shadow-sm hover:shadow-md"
+            variant="outline"
+            className="border border-gray-900 dark:border-white bg-white dark:bg-transparent text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-white/10 transition-all rounded-lg px-6 py-3 text-sm font-medium"
           >
-            Pobierz na eBook o wdrażaniu AI
+            {t.hero.cta}
           </Button>
         </div>
-        <p className="text-lg md:text-xl font-display font-light text-gray-700 dark:text-gray-200 transition-colors">
-          Pomożemy Ci w cyfrowej transformacji Twojej firmy.
-        </p>
       </div>
     </section>
   )
