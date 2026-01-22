@@ -165,7 +165,7 @@ export const translations = {
       copyright: "©2025 Bold Innovation"
     },
     contact: {
-      heading: "Spróbujmy się złapać",
+      heading: "Umów spotkanie",
       subtitle: "Spotkajmy się i porozmawiajmy, rozmowa jest zawsze dobra, a może wyjdzie nam z tego coś wspaniałego!",
       companyName: "Bold Innovation Sp. z o.o.",
       city: "Miasto: Szczecin, Polska",
@@ -355,7 +355,7 @@ export const translations = {
       copyright: "©2025 Bold Innovation"
     },
     contact: {
-      heading: "Let's get in touch",
+      heading: "Schedule a meeting",
       subtitle: "Let's meet and talk, conversation is always good, and maybe something wonderful will come out of it!",
       companyName: "Bold Innovation Sp. z o.o.",
       city: "City: Szczecin, Poland",
