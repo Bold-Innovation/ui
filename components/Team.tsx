@@ -14,11 +14,11 @@ export function Team() {
   }))
 
   return (
-    <section id="who-we-are" className="py-24 px-4 bg-white dark:bg-[rgb(74,87,100)] transition-colors relative z-10">
+    <section id="who-we-are" className="py-16 sm:py-24 px-4 bg-white dark:bg-[rgb(74,87,100)] transition-colors relative z-10">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-3xl font-display font-semibold text-center mb-3 text-gray-900 dark:text-white transition-colors">{t.team.heading}</h2>
-        <p className="text-center text-gray-600 dark:text-gray-300 mb-16 transition-colors">{t.team.subtitle}</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <h2 className="text-2xl sm:text-3xl font-display font-semibold text-center mb-2 sm:mb-3 text-gray-900 dark:text-white transition-colors">{t.team.heading}</h2>
+        <p className="text-center text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-8 sm:mb-12 md:mb-16 transition-colors px-4">{t.team.subtitle}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {teamMembers.map((member, index) => (
             <Card 
               key={index} 
@@ -38,11 +38,11 @@ export function Team() {
                     </span>
                   )}
                 </div>
-                <CardTitle className="text-lg font-display font-semibold text-gray-900 dark:text-white transition-colors">{member.name}</CardTitle>
-                <CardDescription className="text-gray-600 dark:text-gray-300 transition-colors">{member.role}</CardDescription>
+                <CardTitle className="text-base sm:text-lg font-display font-semibold text-gray-900 dark:text-white transition-colors">{member.name}</CardTitle>
+                <CardDescription className="text-sm sm:text-base text-gray-600 dark:text-gray-300 transition-colors">{member.role}</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 leading-relaxed transition-colors">{member.description}</p>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 leading-relaxed transition-colors">{member.description}</p>
                 <a href="#" className="flex items-center justify-center text-gray-400 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
                   <Linkedin className="w-4 h-4" />
                 </a>

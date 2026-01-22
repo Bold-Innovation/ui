@@ -29,9 +29,9 @@ export function Navigation() {
 
   return (
     <nav className="fixed top-0 w-full bg-white/90 dark:bg-[rgb(74,87,100)]/90 backdrop-blur-sm z-50 border-b border-gray-200/30 dark:border-white/5">
-      <div className="container mx-auto px-6 md:px-8 py-3">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 py-2.5 sm:py-3">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-base font-medium text-attio-dark dark:text-white tracking-[-0.01em]">
+          <Link href="/" className="text-sm sm:text-base font-medium text-attio-dark dark:text-white tracking-[-0.01em]">
             Bold Innovation
           </Link>
           <div className="hidden md:flex items-center space-x-6">

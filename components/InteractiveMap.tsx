@@ -76,7 +76,7 @@ export function InteractiveMap({ title, steps }: InteractiveMapProps) {
   return (
     <div className="relative py-12">
       {title && (
-        <h3 className="text-[32px] leading-[38px] font-medium tracking-[-0.16px] mb-16 text-center text-attio-dark dark:text-white font-sans">
+        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] leading-[1.2] sm:leading-[1.3] md:leading-[38px] font-medium tracking-[-0.16px] mb-8 sm:mb-12 md:mb-16 text-center text-attio-dark dark:text-white font-sans">
           {title}
         </h3>
       )}
@@ -229,10 +229,10 @@ export function InteractiveMap({ title, steps }: InteractiveMapProps) {
                               {language === "pl" ? "Krok" : "Step"} {step.number}
                             </span>
                           </div>
-                          <h4 className="text-lg font-semibold text-attio-dark dark:text-white mb-2 font-sans tracking-tight">
+                          <h4 className="text-base sm:text-lg font-semibold text-attio-dark dark:text-white mb-2 font-sans tracking-tight">
                             {step.title}
                           </h4>
-                          <p className="text-sm text-attio-light dark:text-gray-400 leading-relaxed font-sans">
+                          <p className="text-xs sm:text-sm text-attio-light dark:text-gray-400 leading-relaxed font-sans">
                             {step.description}
                           </p>
                         </div>

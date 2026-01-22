@@ -52,11 +52,11 @@ export function ServiceSections() {
   }))
 
   return (
-    <section className="py-32 px-6 bg-white dark:bg-[rgb(74,87,100)] transition-colors relative z-10">
-      <div className="container mx-auto max-w-5xl space-y-40">
+    <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-white dark:bg-[rgb(74,87,100)] transition-colors relative z-10">
+      <div className="container mx-auto max-w-5xl space-y-20 sm:space-y-32 md:space-y-40">
         {/* Open Source Section */}
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <p className="text-[32px] leading-[38px] font-medium tracking-[-0.16px] mb-16 font-sans">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-[32px] leading-[1.2] sm:leading-[1.3] md:leading-[38px] font-medium tracking-[-0.16px] mb-8 sm:mb-12 md:mb-16 font-sans">
             <span className="text-attio-dark dark:text-white">
               {t.services.openSource.intro}
             </span>{" "}
@@ -77,7 +77,7 @@ export function ServiceSections() {
 
         {/* Cloud Section */}
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <p className="text-[32px] leading-[38px] font-medium tracking-[-0.16px] mb-8 font-sans">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-[32px] leading-[1.2] sm:leading-[1.3] md:leading-[38px] font-medium tracking-[-0.16px] mb-8 sm:mb-12 md:mb-16 font-sans">
             <span className="text-attio-dark dark:text-white">
               {t.services.cloud.intro}
             </span>{" "}
@@ -98,7 +98,7 @@ export function ServiceSections() {
 
         {/* Automation Section */}
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <p className="text-[32px] leading-[38px] font-medium tracking-[-0.16px] mb-8 font-sans">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-[32px] leading-[1.2] sm:leading-[1.3] md:leading-[38px] font-medium tracking-[-0.16px] mb-8 sm:mb-12 md:mb-16 font-sans">
             <span className="text-attio-dark dark:text-white">
               {t.services.automation.intro}
             </span>{" "}
@@ -119,7 +119,7 @@ export function ServiceSections() {
 
         {/* Digital Transformation Section */}
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <p className="text-[32px] leading-[38px] font-medium tracking-[-0.16px] mb-8 font-sans">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-[32px] leading-[1.2] sm:leading-[1.3] md:leading-[38px] font-medium tracking-[-0.16px] mb-8 sm:mb-12 md:mb-16 font-sans">
             <span className="text-attio-dark dark:text-white">
               {t.services.digitalTransformation.intro}
             </span>{" "}
@@ -137,7 +137,7 @@ export function ServiceSections() {
 
         {/* Data Modernization Section */}
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <p className="text-[32px] leading-[38px] font-medium tracking-[-0.16px] mb-8 font-sans">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-[32px] leading-[1.2] sm:leading-[1.3] md:leading-[38px] font-medium tracking-[-0.16px] mb-8 sm:mb-12 md:mb-16 font-sans">
             <span className="text-attio-dark dark:text-white">
               {t.services.dataModernization.intro}
             </span>{" "}
