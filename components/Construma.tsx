@@ -19,7 +19,7 @@ export function Construma() {
               />
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed transition-colors">
-              Udział w wydarzeniu dofinansowany w ramach projektu niekonkurencyjnego pn. „Ster na Eksport" realizowany w ramach programu Fundusze Europejskie dla Pomorza Zachodniego 2021-2027, Działanie 1.9 Przygotowanie i wdrożenie nowych modeli biznesowych przedsiębiorstw (w tym wspólne projekty przedsiębiorstw i IOB) - Typ projektu 3 Promocja eksportu i internacjonalizacja MŚP.
+              Udział w wydarzeniu dofinansowany w ramach projektu niekonkurencyjnego pn. &quot;Ster na Eksport&quot; realizowany w ramach programu Fundusze Europejskie dla Pomorza Zachodniego 2021-2027, Działanie 1.9 Przygotowanie i wdrożenie nowych modeli biznesowych przedsiębiorstw (w tym wspólne projekty przedsiębiorstw i IOB) - Typ projektu 3 Promocja eksportu i internacjonalizacja MŚP.
             </p>
           </CardContent>
         </Card>
