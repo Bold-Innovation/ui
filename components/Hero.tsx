@@ -30,11 +30,18 @@ export function Hero() {
         </p>
         <div className="flex items-center justify-center">
           <Button 
+            asChild
             size="lg" 
             variant="outline"
             className="border border-gray-900 dark:border-white bg-white dark:bg-transparent text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-white/10 transition-all rounded-lg px-6 py-3 text-sm font-medium"
           >
-            {t.hero.cta}
+            <a
+              href="https://calendar.app.google/aWHG1swS5MNJwJMp9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t.hero.cta}
+            </a>
           </Button>
         </div>
       </div>
