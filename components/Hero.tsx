@@ -22,7 +22,10 @@ export function Hero() {
         </div>
         <div className="mb-8">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium tracking-[-0.03em] text-attio-dark dark:text-white leading-[1.1] font-sans text-center">
-            {t.hero.heading}
+            {t.hero.headingLine1}
+            <br className="sm:hidden" />
+            <span className="hidden sm:inline"> </span>
+            {t.hero.headingLine2}
           </h1>
         </div>
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-normal mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed text-attio-light dark:text-gray-400 font-sans px-4">

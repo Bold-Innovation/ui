@@ -9,6 +9,8 @@ export const translations = {
     hero: {
       tagline: "Transformacja cyfrowa",
       heading: "Zamień dane w wiedzę",
+      headingLine1: "Zamień dane",
+      headingLine2: "w wiedzę",
       description: "Wyprzedź konkurencję dzięki zaawansowanej automatyzacji opartej na sztucznej inteligencji.",
       cta: "Umów spotkanie",
     },
@@ -199,6 +201,8 @@ export const translations = {
     hero: {
       tagline: "Digital transformation",
       heading: "Turn data into knowledge",
+      headingLine1: "Turn data",
+      headingLine2: "into knowledge",
       description: "Stay ahead of the competition with advanced AI-powered automation.",
       cta: "Schedule a meeting",
     },
